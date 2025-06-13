@@ -16,9 +16,7 @@ Proyek ini bertujuan untuk membangun sistem klasifikasi citra **OCT (Optical Coh
 
 ---
 
-## 🧪 Metodologi
-
-### A. Data Acquisition
+## Dataset
 Dataset yang digunakan adalah **Kermany OCT Dataset**, tersedia di:
 🔗 [Kaggle - Kermany 2018](https://www.kaggle.com/datasets/paultimothymooney/kermany2018)  
 Dataset ini terdiri dari 4 kelas utama:
@@ -26,13 +24,3 @@ Dataset ini terdiri dari 4 kelas utama:
 - DME (Diabetic Macular Edema)
 - DRUSEN
 - NORMAL
-
-### B. Exploratory Data Analysis (EDA)
-Analisis dilakukan untuk memahami distribusi label dan karakteristik visual dari masing-masing kelas:
-- Menggunakan **seaborn countplot** untuk mengetahui distribusi jumlah data pada tiap kelas.
-- Menampilkan contoh gambar dari tiap kelas untuk memahami kompleksitas intra-kelas dan variasi antar-kelas.
-
-### C. Preprocessing
-Citra akan diresize menjadi 224x224 pixel dan dinormalisasi menggunakan mean dan standard deviation dari ImageNet:
-```python
-transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
